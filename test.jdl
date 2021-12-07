@@ -1,0 +1,46 @@
+application {
+  config {
+    packageName ar.com.ensolvers.todo
+    baseName toDoensolvers
+    nativeLanguage es
+    applicationType monolith
+    serverPort 8085
+    authenticationType jwt
+    cacheProvider hazelcast
+    enableHibernateCache true
+    websocket false
+    databaseType sql
+    devDatabaseType h2Disk
+    prodDatabaseType mysql
+    searchEngine false
+    messageBroker false
+    enableSwaggerCodegen false
+    clientPackageManager npm
+    clientFramework angularX
+    clientTheme cerulean
+    clientThemeVariant primary
+    jhiPrefix jhi
+    dtoSuffix DTO
+    enableTranslation true
+    nativeLanguage es
+    languages [ es, en, pt-br ]
+  }
+  entities Folder, File
+}
+entity Folder {
+    nombre String
+    
+}
+
+entity File {
+    nombre String,
+    descripcion String,
+    estado Boolean,
+    
+}
+
+relationship OneToMany{
+    Folder{file(nombre)} to File{folder(nombre)}
+    
+    
+}

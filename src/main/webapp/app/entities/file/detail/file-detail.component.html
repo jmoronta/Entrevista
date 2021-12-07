@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="file">
+      <h2 data-cy="fileDetailsHeading"><span jhiTranslate="toDoensolversApp.file.detail.title">File</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ file.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="toDoensolversApp.file.nombre">Nombre</span></dt>
+        <dd>
+          <span>{{ file.nombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="toDoensolversApp.file.descripcion">Descripcion</span></dt>
+        <dd>
+          <span>{{ file.descripcion }}</span>
+        </dd>
+        <dt><span jhiTranslate="toDoensolversApp.file.estado">Estado</span></dt>
+        <dd>
+          <span>{{ file.estado }}</span>
+        </dd>
+        <dt><span jhiTranslate="toDoensolversApp.file.folder">Folder</span></dt>
+        <dd>
+          <div *ngIf="file.folder">
+            <a [routerLink]="['/folder', file.folder?.id, 'view']">{{ file.folder?.nombre }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/file', file.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

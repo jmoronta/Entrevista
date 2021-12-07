@@ -1,0 +1,36 @@
+{
+  "name": "File",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "folder",
+      "otherEntityRelationshipName": "file",
+      "relationshipName": "folder",
+      "otherEntityField": "nombre"
+    }
+  ],
+  "entityTableName": "file",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["toDoensolvers"],
+  "changelogDate": "20211206235608"
+}

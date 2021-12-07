@@ -1,0 +1,27 @@
+{
+  "toDoensolversApp": {
+    "file": {
+      "home": {
+        "title": "Files",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo File",
+        "createOrEditLabel": "Crear o editar File",
+        "notFound": "Ningún Files encontrado"
+      },
+      "created": "Un nuevo File ha sido creado con el identificador {{ param }}",
+      "updated": "Un File ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un File ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar File {{ id }}?"
+      },
+      "detail": {
+        "title": "File"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "estado": "Estado",
+      "folder": "Folder"
+    }
+  }
+}
